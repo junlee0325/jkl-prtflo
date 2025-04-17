@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-lg: 1200px;
+  --breakpoint-md: 800px;
+  --breakpoint-sm: 600px;
+
+  --font-Roboto: "Roboto", "sans-serif";
+
+  --color-50: #f1f8fa;
+  --color-100: #dcedf1;
+  --color-200: #bcdce5;
+  --color-300: #8ec3d2;
+  --color-400: #59a1b7;
+  --color-500: #3d859d;
+  --color-600: #366d84;
+  --color-700: #315a6d;
+  --color-800: #2f4d5b;
+  --color-900: #2b414e;
+  --color-950: #182934;
+}
