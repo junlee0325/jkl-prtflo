@@ -1,8 +1,12 @@
 import React from "react";
+import { useState } from "react";
 
 export const Greeting = ({boxStyle}) => {
+  const [mouseEnter, setMouseEnter] = useState(false);
   return (
-    <div className={`${boxStyle} bg-[#f1f8fa] text-[#366d84] lg:pt-11 md:pt-4`}>
+    <div className={`${boxStyle} bg-[#f1f8fa] text-[#366d84] lg:pt-11 md:pt-4 ${mouseEnter ? "animate-bouncy" : ""}`}
+    onMouseEnter={() => setMouseEnter(true)}
+      onMouseLeave={() => setMouseEnter(false)}>
       <span className="lg:pt-12 md:pt-5">
         {new Date().getHours() < 12
           ? "Good morning"

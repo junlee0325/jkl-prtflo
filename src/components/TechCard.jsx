@@ -8,13 +8,13 @@ const TechCard = ({logo, label}) => {
   const tiltHandlers = useTiltEffect(cardRef, glowRef);
 
   const [textShow, setTextShow] = useState(false)
-
+const [mouseEnter, setMouseEnter] = useState(false);
   return (
-    <div className="perspective-[1000px] aspect-1/1 flex flex-col items-center justify-center lg:w-auto md:w-auto max-w-[120px] text-[#182934] lg:mx-0 lg:mt-0 md:mx-0 md:mt-0 mx-2 mt-2" onMouseEnter={() => setTextShow(true)} onMouseLeave={() => setTextShow(false)}>
+    <div className={`perspective-[1000px] aspect-1/1 flex flex-col items-center justify-center lg:w-auto md:w-auto max-w-[120px] text-[#182934] lg:mx-0 lg:mt-0 md:mx-0 md:mt-0 mx-2 mt-2 ${mouseEnter ? "animate-bouncy" : ""}`} onMouseEnter={() => {setTextShow(true);setMouseEnter(true)}} onMouseLeave={() => {setTextShow(false);setMouseEnter(false)}}>
       <div
         ref={cardRef}
         {...tiltHandlers}
-        className="relative rounded-xl aspect-1/1 transform-style-preserve-3d transition-transform duration-1000 ease-out shadow-white shadow-sm hover:shadow-xl hover:scale-110 bg-[#366d84] flex flex-col justify-center items-center "
+        className="relative rounded-xl aspect-1/1 transform-style-preserve-3d transition-transform duration-1000 ease-out shadow-black shadow-md hover:shadow-lg hover:scale-110 bg-[#366d84] flex flex-col justify-center items-center "
       >
         <img src={logo} className='bg-white rounded-lg object-contain object-no-repeat  w-[90%] p-2' />
         {textShow && <div className='absolute top-0 left-0 w-full h-full lg:flex md:flex hidden justify-center items-center bg-[#315a6d95] rounded-xl p-2'>

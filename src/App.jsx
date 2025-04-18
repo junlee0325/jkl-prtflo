@@ -16,7 +16,7 @@ function App() {
       }}
     >
       <Body />
-      <footer className="w-full bg-[#8ec3d2] flex lg:flex-row md:flex-row flex-col lg:justify-center md:justify-center justify-center items-center mt-4 lg:gap-4 md:gap-4 p-1 text-[white] text-sm">
+      <footer className="w-full bg-[#8ec3d2] flex lg:flex-row md:flex-row flex-col lg:justify-center md:justify-center justify-center items-center mt-12 lg:gap-4 md:gap-4 p-1 text-[white] text-sm">
         <span>© 2025 Jun kyung Lee. All rights reserved.</span>
         <div className="flex gap-2">
           <span>Contact:</span>

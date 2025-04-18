@@ -18,4 +18,36 @@
   --color-800: #2f4d5b;
   --color-900: #2b414e;
   --color-950: #182934;
+
+  --color-shadow: rgba(0,0,0,.7)
+}
+
+@layer utilities {
+  @keyframes bounce-custom {
+    0%, 100% {
+      transform: translateY(-5px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+  }
+
+  .animate-bouncy {
+    animation: bounce-custom 2s ease-in-out infinite;
+  }
+
+  @keyframes custom-pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-custom-pulse {
+    animation: custom-pulse 2s ease-in-out infinite;
+  }
 }

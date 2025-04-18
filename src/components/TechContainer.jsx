@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import TechCard from "./TechCard";
 import html from "../assets/tech/html.webp";
 import css from "../assets/tech/css.webp";
@@ -14,8 +15,11 @@ import json from "../assets/tech/json.webp";
 import photoshop from "../assets/tech/photoshop.webp";
 
 export const TechContainer = ({boxStyle}) => {
+  const [mouseEnter, setMouseEnter] = useState(false);
   return (
-    <div className={`${boxStyle} bg-[#8ec3d2]`}>
+    <div className={`${boxStyle} bg-[#8ec3d2] `}
+    onMouseEnter={() => setMouseEnter(true)}
+      onMouseLeave={() => setMouseEnter(false)}>
         <h3 className='w-full text-center lg:text-2xl md:text-xl text-lg text-[#2b414e] pb-2'>Toolbox</h3>
         <div className='grid lg:grid-cols-6 md:grid-cols-6 grid-cols-4 place-items-center lg:gap-6 md:gap-4 gap-0'>
         <TechCard logo={html} label={"HTML"} />

@@ -10,6 +10,7 @@ import CheckIcon from "@mui/icons-material/Check";
 export const InfoCard = () => {
   const email = "junlee0325@gmail.com";
   const [copied, setCopied] = useState(false);
+  const [mouseEnter, setMouseEnter] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email).then(() => {
@@ -18,21 +19,23 @@ export const InfoCard = () => {
     });
   };
   return (
-    <div className="lg:w-2/7 md:w-1/3">
+    <div className="lg:w-2/7 md:w-1/3 ">
       <motion.div
         initial={{ y: "110vh" , opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
-          duration: 0.5,
+          duration: 0.05,
           ease: "anticipate"
         }}
-        className={`rounded-2xl aspect-3/4 hidden md:flex lg:flex items-end sticky top-10 shadow-white shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-105`}
+        className={`rounded-2xl aspect-3/4 hidden md:flex lg:flex items-end sticky top-10 shadow-shadow shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-103 ${mouseEnter ? "animate-bouncy" : ""}`}
         style={{
           backgroundImage: `url(${portrait})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
+        onMouseEnter={() => setMouseEnter(true)}
+      onMouseLeave={() => setMouseEnter(false)}
       >
         <div className="rounded-2xl bg-gradient-to-t from-[#3d859d] to-transparent w-full h-1/2 flex items-end">
           <div className="w-full flex justify-between lg:p-6 md:p-4">
@@ -78,9 +81,15 @@ export const InfoCard = () => {
       </motion.div>
 
       <div
-        className={`w-full h-[150px] flex md:hidden lg:hidden items-start bg-gradient-to-b from-[#366d84] to-transparent px-2`}
+        className={`w-full h-[130px] flex md:hidden lg:hidden items-start bg-gradient-to-b from-[#366d84] to-transparent px-2`}
       >
-        <div className="w-full flex justify-between items-start flex-row py-6 px-3">
+        <motion.div className="w-full flex justify-between items-start flex-row py-6 px-3"
+        initial={{ y: "110vh" , opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.3,
+          ease: "anticipate"
+        }}>
           <div className="flex flex-col justify-start text-[#f1f8fa] gap-1">
             <h1 className="text-3xl font-semibold">Jun Kyung Lee</h1>
             <span
@@ -112,7 +121,7 @@ export const InfoCard = () => {
             loading="lazy"
             className="position-center saturate-90 w-[110px] h-[110px] object-cover object-top rounded-xl border border-6 border-[#f1f8fa]"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

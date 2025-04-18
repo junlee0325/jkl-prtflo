@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import hwatuTarot from "../assets/screenshots/hwatuTarot.webp";
 import fridgeRaider from "../assets/screenshots/fridgeRaider.webp";
@@ -6,14 +7,17 @@ import skye from "../assets/screenshots/skye.webp";
 import weeklyBytes from "../assets/screenshots/weeklyBytes.webp";
 
 export const ProjectContainer = ({ boxStyle }) => {
+  const [mouseEnter, setMouseEnter] = useState(false);
   return (
     <div
-      className={`${boxStyle} bg-[#59a1b7] flex flex-col justify-center items-center text-[#f1f8fa] hover:translate-y-4`}
+      className={`${boxStyle} bg-[#59a1b7] flex flex-col justify-center items-center text-[#f1f8fa] hover:translate-y-4 `}
+      onMouseEnter={() => setMouseEnter(true)}
+      onMouseLeave={() => setMouseEnter(false)}
     >
       <h3 className="w-full text-center lg:text-2xl md:text-xl text-lg text-[#f1f8fa] pb-4">
         Projects
       </h3>
-      <div className="flex flex-col gap-6 w-full lg:h-[1500px] md:h-[1200px] h-[1000px] items-center">
+      <div className="flex flex-col gap-6 w-full lg:h-[1200px] md:h-[1000px] h-[1000px] items-center">
         <ProjectCard
           title="Weekly Bytes"
           dsc="A weekly menu planner that lets users select a date range and generate randomized meal plans."
