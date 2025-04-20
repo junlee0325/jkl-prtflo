@@ -8,7 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CheckIcon from "@mui/icons-material/Check";
 
 export const InfoCard = () => {
-  const email = "junlee0325@gmail.com";
+  const email = "junkyung9503@gmail.com";
   const [copied, setCopied] = useState(false);
   const [mouseEnter, setMouseEnter] = useState(false);
 

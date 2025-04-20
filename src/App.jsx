@@ -21,7 +21,7 @@ function App() {
         <div className="flex gap-2">
           <span>Contact:</span>
           <div className="flex gap-2">
-            <span className="hover:underline">junlee0325@gmail.com</span>
+            <span className="hover:underline">junkyung9503@gmail.com</span>
             <a
               href="https://www.linkedin.com/in/iam-junkyunglee/"
               target="_blank"
