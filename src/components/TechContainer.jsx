@@ -12,6 +12,7 @@ import github from "../assets/tech/github.webp";
 import figma from "../assets/tech/figma.webp";
 import api from "../assets/tech/api.webp";
 import json from "../assets/tech/json.webp";
+import typescript from "../assets/tech/typescript.webp";
 import photoshop from "../assets/tech/photoshop.webp";
 
 export const TechContainer = ({boxStyle}) => {
@@ -26,13 +27,13 @@ export const TechContainer = ({boxStyle}) => {
           <TechCard logo={css} label={"CSS"} />
           <TechCard logo={javascript} label={"JavaScript"} />
           <TechCard logo={react} label={"React"} />
+          <TechCard logo={typescript} label={"TypeScript"} />
           <TechCard logo={tailwind} label={"Tailwind"} />
           <TechCard logo={sass} label={"SASS"} />
           <TechCard logo={git} label={"Git"} />
           <TechCard logo={github} label={"GitHub"} />
           <TechCard logo={figma} label={"Figma"} />
           <TechCard logo={api} label={"API"} />
-          <TechCard logo={json} label={"JSON"} />
           <TechCard logo={photoshop} label={"Photoshop"} />
     </div>
     </div>
