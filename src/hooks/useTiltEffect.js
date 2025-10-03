@@ -50,7 +50,7 @@ export function useTiltEffect(cardRef, glowRef) {
           circle at
           ${center.x * 2 + bounds.width / 2}px
           ${center.y * 2 + bounds.height / 2}px,
-rgb(0, 0, 0),
+rgba(1, 41, 87, 1),
 #ffffff
         )
       `;

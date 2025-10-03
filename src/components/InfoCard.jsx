@@ -19,15 +19,9 @@ export const InfoCard = () => {
     });
   };
   return (
-    <div className="lg:w-2/7 md:w-1/3 ">
-      <motion.div
-        initial={{ y: "110vh" , opacity: 1 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          duration: 0.05,
-          ease: "anticipate"
-        }}
-        className={`rounded-2xl aspect-3/4 hidden md:flex lg:flex items-end sticky top-10 shadow-shadow shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-103 ${mouseEnter ? "animate-bouncy" : ""}`}
+    <div className="w-full">
+      <div
+        className={`shadow-shadow shadow-md hover:shadow-xl rounded-xl aspect-3/4 hidden md:flex lg:flex items-end transition-all duration-300 ease-in-out hover:scale-103 ${mouseEnter ? "" : "animate-bouncy"}`}
         style={{
           backgroundImage: `url(${portrait})`,
           backgroundSize: "cover",
@@ -78,10 +72,10 @@ export const InfoCard = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       <div
-        className={`w-full h-[130px] flex md:hidden lg:hidden items-start bg-gradient-to-b from-[#366d84] to-transparent px-2`}
+        className={`w-full h-[130px] flex md:hidden lg:hidden items-start px-1`}
       >
         <motion.div className="w-full flex justify-between items-start flex-row py-6 px-3"
         initial={{ y: "110vh" , opacity: 0 }}
@@ -90,7 +84,7 @@ export const InfoCard = () => {
           duration: 0.3,
           ease: "anticipate"
         }}>
-          <div className="flex flex-col justify-start text-[#f1f8fa] gap-1">
+          <div className="flex flex-col justify-start text-[#315a6d] gap-1">
             <h1 className="text-3xl font-semibold">Jun Kyung Lee</h1>
             <span
               className="text-base cursor-pointer hover:underline align-middle"
@@ -119,7 +113,7 @@ export const InfoCard = () => {
           <img
             src={portraitSmall}
             loading="lazy"
-            className="position-center saturate-90 w-[110px] h-[110px] object-cover object-top rounded-xl border border-6 border-[#f1f8fa]"
+            className="position-center saturate-90 w-[110px] h-[110px] object-cover object-top rounded-xl shadow-black shadow-md"
           />
         </motion.div>
       </div>

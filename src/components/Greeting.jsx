@@ -8,12 +8,7 @@ export const Greeting = ({boxStyle}) => {
     onMouseEnter={() => setMouseEnter(true)}
       onMouseLeave={() => setMouseEnter(false)}>
       <span className="lg:pt-12 md:pt-5">
-        {new Date().getHours() < 12
-          ? "Good morning"
-          : new Date().getHours() < 18
-          ? "Good afternoon"
-          : "Good evening"}
-        , I'm Jun, a software enigineer with a strong foundation in both
+        My name is Jun. I'm a software enigineer with a strong foundation in both
         technology and business strategy. Having worked as a software consultant
         and co-owned a retail business, I understand the importance of crafting
         solutions that not only look great but also make an impact. Whether it’s

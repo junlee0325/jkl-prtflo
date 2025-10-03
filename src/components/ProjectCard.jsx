@@ -1,26 +1,36 @@
 import React, { useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-export const ProjectCard = ({ screenshot, title, dsc, projectUrl, repo }) => {
+export const ProjectCard = ({ screenshot, title, dsc, projectUrl, repo, techUsed, setHoveredTechs }) => {
   const [mouseEnter, setMouseEnter] = useState(false);
+
+  const handleMouseEnter = () => {
+    setMouseEnter(true);
+    setHoveredTechs(techUsed);
+  };
+
+  const handleMouseLeave = () => {
+    setMouseEnter(false);
+    setHoveredTechs([]);
+  };
 
   return (
     <div
-      className={`flex flex-col justify-end basis-0 grow-1 w-full rounded-xl overflow-hidden transition-all duration-500 ease-in-out hover:basis-0 lg:hover:grow-[1.8] md:hover:grow-[1.5] shadow-black shadow-md hover:shadow-lg text-[#f1f8fa] hover:text-[#182934] ${mouseEnter ? "animate-bouncy" : ""}`}
+      className={`flex flex-col justify-end basis-[200px] w-full rounded-xl transition-all duration-500 ease-in-out hover:basis-[400px] shadow-black shadow-md hover:shadow-lg text-[#f1f8fa] hover:text-[#182934] ${mouseEnter ? "animate-bouncy" : ""}`}
       style={{
         backgroundImage: `url(${screenshot})`,
         backgroundPosition: "top",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      onMouseEnter={() => setMouseEnter(true)}
-      onMouseLeave={() => setMouseEnter(false)}
+      onMouseEnter={() => handleMouseEnter()}
+      onMouseLeave={() => handleMouseLeave()}
     >
       <div
         // href={`${projectUrl}`}
         // target="_blank"
         // rel="noopener noreferrer"
-        className="flex flex-col justify-end w-full h-full bg-gradient-to-t from-[#315a6d] to-transparent hover:from-[#f1f8fa]"
+        className="flex flex-col justify-end w-full h-full bg-gradient-to-t from-[#315a6d] to-transparent hover:from-[#f1f8fa] rounded-xl"
       >
         {/* {mouseEnter && (
           <div className=" h-full inset-0 lg:flex hidden flex-col justify-end p-4 text-[#182934] bg-gradient-to-t from-[#dcedf1] to-transparent">
