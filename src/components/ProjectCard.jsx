@@ -25,6 +25,7 @@ export const ProjectCard = ({ screenshot, title, dsc, projectUrl, repo, techUsed
       }}
       onMouseEnter={() => handleMouseEnter()}
       onMouseLeave={() => handleMouseLeave()}
+      onClick={() => window.open(`${projectUrl}`,"_blank")}
     >
       <div
         // href={`${projectUrl}`}

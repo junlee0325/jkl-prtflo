@@ -28,7 +28,7 @@ function App() {
         }}
         onAnimationComplete={() => setIntroPlayed(true)}
       >
-        <h3 className="text-5xl text-[#8ec3d2] font-Pacifico font-thin">
+        <h3 className="lg:text-5xl md:text-5xl text-3xl text-[#8ec3d2] font-Pacifico font-thin">
           - {new Date().getHours() < 12
             ? "Good Morning"
             : new Date().getHours() < 18

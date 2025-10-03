@@ -39,14 +39,14 @@ export const TechContainer = ({ boxStyle, hoveredTechs }) => {
 
   return (
     <div
-      className={`${boxStyle} bg-[#8ec3d2] `}
+      className={`lg:text-lg md:text-base text-xs rounded-xl font-semibold lg:m-0 md:m-0 mx-3 lg:pb-12 md:pb-5 lg:px-0 md:px-0 p-3 shadow-shadow shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-103 bg-[#8ec3d2]`}
       onMouseEnter={() => setMouseEnter(true)}
       onMouseLeave={() => setMouseEnter(false)}
     >
       <h3 className="w-full text-center lg:text-2xl md:text-xl text-lg text-[#2b414e] pb-2">
         Toolbox
       </h3>
-      <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-6 md:p-4 lg:gap-6 md:gap-6 gap-2">
+      <div className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-6 md:p-4 lg:gap-4 md:gap-4 gap-2">
         {techs.map(({ logo, label }) => (
           <TechCard
             key={label}
