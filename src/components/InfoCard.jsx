@@ -34,14 +34,14 @@ export const InfoCard = () => {
         <div className="rounded-2xl bg-gradient-to-t from-[#3d859d] to-transparent w-full h-1/2 flex items-end">
           <div className="w-full flex justify-between lg:p-4 p-3">
             <div className="flex flex-col justify-around items-start text-[#dcedf1] gap-2">
-              <h1 className="lg:text-4xl md:text-3xl font-semibold text-white">
+              <h1 className="lg:text-3xl md:text-3xl font-semibold text-white">
                 Jun Kyung
               </h1>
-              <h1 className="lg:text-4xl md:text-3xl font-semibold text-white">
+              <h1 className="lg:text-3xl md:text-3xl font-semibold text-white">
                 Lee
               </h1>
               <span
-                className="lg:text-xl md:text-[15px] cursor-pointer hover:text-white hover:underline align-middle"
+                className="lg:text-md md:text-md cursor-pointer hover:text-white hover:underline align-middle"
                 onClick={handleCopy}
                 title="Click to copy"
               >
