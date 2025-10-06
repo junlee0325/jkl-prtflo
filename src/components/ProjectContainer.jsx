@@ -21,7 +21,7 @@ export const ProjectContainer = ({ boxStyle, setHoveredTechs }) => {
       <div className="flex flex-col gap-6 w-full lg:h-fit md:h-fit h-fit items-center">
         <ProjectCard
           title="brilly"
-          dsc="AI assisted falshcard learning tool providing additonal elaboration on words/concepts"
+          dsc="AI assisted flashcard learning tool providing additional elaboration on words/concepts"
           projectUrl="https://brilly.netlify.app"
           repo="https://github.com/danajeon/brilly"
           screenshot={brilly}
