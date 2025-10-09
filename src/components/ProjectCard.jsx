@@ -16,7 +16,7 @@ export const ProjectCard = ({ screenshot, title, dsc, projectUrl, repo, techUsed
 
   return (
     <div
-      className={`flex flex-col justify-end basis-[200px] w-full rounded-xl transition-all duration-500 ease-in-out hover:basis-[400px] shadow-black shadow-md hover:shadow-lg text-[#f1f8fa] hover:text-[#182934] ${mouseEnter ? "animate-bouncy" : ""}`}
+      className={`flex flex-col justify-end basis-[300px] w-full rounded-xl transition-all duration-500 ease-in-out hover:basis-[400px] shadow-black shadow-md hover:shadow-lg text-[#f1f8fa] hover:text-[#182934] ${mouseEnter ? "animate-bouncy" : ""}`}
       style={{
         backgroundImage: `url(${screenshot})`,
         backgroundPosition: "top",
@@ -77,10 +77,30 @@ export const ProjectCard = ({ screenshot, title, dsc, projectUrl, repo, techUsed
           >
             <GitHubIcon fontSize="medium" />
           </a>
+          <div className="lg:flex md:flex hidden flex-wrap gap-1">
+            {techUsed.map((x, i) => { 
+              if(i === techUsed.length - 1) {
+                return <span className="lg:text-sm md:text-xs">{x}</span>
+              } else {
+                return <span className="lg:text-sm md:text-xs flex flex-nowrap">{x} |</span>
+              }
+            }
+            )}
+          </div>
         </div>
-        <span className="block lg:hidden text-sm font-normal mt-1 text-inherit px-4 pb-3">
-          {dsc}
-        </span>
+        <div className="block lg:hidden text-sm font-normal mt-1 text-inherit px-4 pb-3">
+          <span>{dsc}</span>
+          <div className="flex gap-1 flex-wrap md:hidden text-gray-300">
+            {techUsed.map((x, i) => { 
+              if(i === techUsed.length - 1) {
+                return <span className="text-xs">{x}</span>
+              } else {
+                return <span className="text-xs">{x} |</span>
+              }
+            }
+            )}
+          </div>
+        </div>
         {mouseEnter && (
           <span className="lg:block hidden text-lg  mt-1 text-inherit px-5 pb-6">
             {dsc}

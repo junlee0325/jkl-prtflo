@@ -10,7 +10,7 @@ const TechCard = ({logo, label, highlight}) => {
   const [textShow, setTextShow] = useState(false)
 const [mouseEnter, setMouseEnter] = useState(false);
   return (
-    <div className={`perspective-[1000px] aspect-1/1 flex flex-col items-center flex-1 justify-center lg:w-auto md:w-auto w-[90%] text-[#182934] lg:mx-0 lg:mt-0 md:mx-0 md:mt-0 mx-2 mt-2 ${mouseEnter ? "animate-bouncy" : ""} rounded-2xl ${highlight ? "lg:scale-130 md:scale-130 scale-110" : ""} ${highlight ? "animate-bouncy" : ""} hover:z-200`} onMouseEnter={() => {setTextShow(true);setMouseEnter(true)}} onMouseLeave={() => {setTextShow(false);setMouseEnter(false)}}>
+    <div className={`perspective-[1000px] aspect-1/1 flex flex-col items-center flex-1 justify-center lg:w-auto md:w-auto w-auto text-[#182934]  ${mouseEnter ? "animate-bouncy" : ""} rounded-2xl ${highlight ? "lg:scale-120 md:scale-120 scale-110" : ""} ${highlight ? "animate-bouncy" : ""} hover:z-200`} onMouseEnter={() => {setTextShow(true);setMouseEnter(true)}} onMouseLeave={() => {setTextShow(false);setMouseEnter(false)}}>
       <div
         ref={cardRef}
         {...tiltHandlers}

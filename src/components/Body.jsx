@@ -16,7 +16,7 @@ export const Body = () => {
       {/* Desktop / Tablet Layout */}
       <div className="hidden md:flex lg:flex flex-row gap-6">
         {/* LEFT COLUMN */}
-        <div className="lg:w-2/8 md:w-1/3 h-[190vh]">
+        <div className="lg:w-2/8 md:w-1/3 h-[220vh]">
           <motion.div
             className="sticky top-10 flex flex-col gap-6"
             initial={{ y: "110vh", opacity: 1 }}

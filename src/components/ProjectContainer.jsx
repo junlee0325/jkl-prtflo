@@ -55,15 +55,6 @@ export const ProjectContainer = ({ boxStyle, setHoveredTechs }) => {
           setHoveredTechs={setHoveredTechs}
         />
         <ProjectCard
-          title="Hwatu Tarot"
-          dsc="Solitaire-like game providing daily horoscopes, inspired by my grandmother's Asian playing card readings."
-          projectUrl="https://hwatu-tarot.com"
-          repo="https://github.com/junlee0325/Hwatu-Tarot"
-          screenshot={hwatuTarot}
-          techUsed={["HTML", "CSS", "JavaScript", "Git", "GitHub"]}
-          setHoveredTechs={setHoveredTechs}
-        />
-        <ProjectCard
           title="Skye Contractor Inc."
           dsc="Promotional website for a local contractor displaying his services and finished projects."
           projectUrl="https://sangkyu-kim.pages.dev/"
@@ -73,12 +64,21 @@ export const ProjectContainer = ({ boxStyle, setHoveredTechs }) => {
           setHoveredTechs={setHoveredTechs}
         />
         <ProjectCard
+          title="Hwatu Tarot"
+          dsc="Solitaire-like game providing daily horoscopes, inspired by my grandmother's Asian playing card readings."
+          projectUrl="https://hwatu-tarot.com"
+          repo="https://github.com/junlee0325/Hwatu-Tarot"
+          screenshot={hwatuTarot}
+          techUsed={["JavaScript", "HTML", "CSS", "Git", "GitHub"]}
+          setHoveredTechs={setHoveredTechs}
+        />
+        <ProjectCard
           title="Fridge Raider"
           dsc="Website to help you search recipes by ingredients to use up what you have and reduce waste."
           projectUrl="https://junlee0325.github.io/Fridge-Raider/"
           repo="https://github.com/junlee0325/Fridge-Raider"
           screenshot={fridgeRaider}
-          techUsed={["HTML", "CSS", "JavaScript", "API", "Git", "GitHub"]}
+          techUsed={["JavaScript", "HTML", "CSS", "API", "Git", "GitHub"]}
           setHoveredTechs={setHoveredTechs}
         />
       </div>
