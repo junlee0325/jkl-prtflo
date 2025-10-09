@@ -37,8 +37,8 @@ export const InfoCard = () => {
       >
         <div className="rounded-2xl bg-gradient-to-t from-[#3d859d] to-transparent w-full h-1/2 flex items-end">
           <div className="w-full flex justify-between lg:p-4 p-3">
-            <div className="w-[80%] flex flex-col justify-around items-start text-[#dcedf1] gap-2">
-              <h1 className="lg:text-2xl md:text-2xl font-semibold text-[#f1f8fa]">
+            <div className="w-[80%] flex flex-col justify-around items-start text-[#dcedf1]">
+              <h1 className="lg:text-3xl md:text-3xl font-semibold text-[rgba(255,174,0,1)]">
                 Jun Kyung Lee
               </h1>
               <span
@@ -87,7 +87,7 @@ export const InfoCard = () => {
       </div>
 
       <div
-        className={`w-full h-fit flex md:hidden lg:hidden items-start px-1`}
+        className={`w-full h-fit flex md:hidden lg:hidden items-start px-1 bg-gradient-to-t from-transparent to-[#366d84]`}
       >
         <motion.div
           className="w-full flex justify-between items-start flex-row pt-6 px-3"
@@ -99,17 +99,17 @@ export const InfoCard = () => {
           }}
         >
           <div className="flex flex-col justify-between text-[#315a6d] gap-3 w-[60%]">
-            <h1 className="text-3xl font-semibold">Jun Kyung Lee</h1>
+            <h1 className="text-3xl font-semibold text-[rgba(255,174,0,1)]">Jun Kyung Lee</h1>
+            <span className="text-xs flex flex-wrap text-[#f1f8fa]">
+              Frontend Developer | React | JavaScript | TypeScript | React
+              Native | Tailwind | Figma | UX/UI
+            </span>
             <span
-              className="text-md cursor-pointer hover:underline align-middle"
+              className="text-md cursor-pointer hover:underline align-middle text-[#315a6d]"
               onClick={handleCopy}
               title="Click to copy"
             >
               {email} {copied && <CheckIcon fontSize="extrasmall" />}
-            </span>
-            <span className="text-xs flex flex-wrap">
-              Frontend Developer | React | JavaScript | TypeScript | React
-              Native | Tailwind | Figma | UX/UI
             </span>
           </div>
           <div className="w-[30%] flex flex-col items-end text-[#315a6d]">
