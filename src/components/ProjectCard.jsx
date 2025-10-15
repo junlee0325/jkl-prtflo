@@ -60,7 +60,7 @@ export const ProjectCard = ({ screenshot, title, dsc, projectUrl, repo, techUsed
           </div>
         )} */}
 
-        <div className="flex justify-start gap-2 items-center text-inherit lg:px-5 px-4 lg:pb-4 md:pb-4 ">
+        <div className="flex justify-start gap-2 items-center text-inherit lg:px-5 px-4 lg:pb-4 md:pb-4 lg:pt-0 md:pt-0 pt-2">
           <a
             href={`${projectUrl}`}
             target="_blank"

@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import portrait from "../assets/jun5.webp";
-import portraitSmall from "../assets/jun6.webp";
+import portrait from "../assets/IMG_4017.webp";
+import portraitSmall from "../assets/IMG_4017_2.webp";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CheckIcon from "@mui/icons-material/Check";
