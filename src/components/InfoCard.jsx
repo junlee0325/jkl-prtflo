@@ -35,7 +35,7 @@ export const InfoCard = () => {
         onMouseEnter={() => setMouseEnter(true)}
         onMouseLeave={() => setMouseEnter(false)}
       >
-        <div className="rounded-2xl bg-gradient-to-t from-[#59a1b7] to-transparent w-full h-1/2 flex items-end">
+        <div className="rounded-xl bg-gradient-to-t from-[#315a6d] to-transparent w-full h-1/2 flex items-end">
           <div className="w-full flex justify-between lg:p-4 p-3">
             <div className="w-[80%] flex flex-col justify-around items-start text-[#dcedf1]">
               <h1 className="lg:text-3xl md:text-3xl font-semibold text-[rgba(255,174,0,1)]">
