@@ -66,6 +66,16 @@ export const Body = () => {
           }}
         >
           <Greeting boxStyle={boxStyle} />
+        </motion.div>
+        <motion.div
+          className="flex flex-col gap-6"
+          initial={{ x: "-110vw", opacity: 1 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: 0.7,
+            ease: "anticipate",
+          }}
+        >
           <TechContainer boxStyle={boxStyle} hoveredTechs={hoveredTechs}/>
           <ProjectContainer boxStyle={boxStyle} setHoveredTechs={setHoveredTechs}/>
         </motion.div>

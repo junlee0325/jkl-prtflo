@@ -19,7 +19,7 @@ function App() {
       }}
     >
       <motion.div
-        className={`h-[140px] justify-center items-center w-full lg:flex md:flex ${introPlayed ? "hidden":"flex"}`}
+        className={`lg:h-[140px] md:h-[140px] h-[100px] justify-center items-center w-full flex`}
         initial={{ y: "40vh", opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
@@ -38,6 +38,7 @@ function App() {
       </motion.div>
 
       {introPlayed && <Body />}
+
       <footer className="w-full bg-[#8ec3d2] flex lg:flex-row md:flex-row flex-col lg:justify-center md:justify-center justify-center items-center mt-12 lg:gap-4 md:gap-4 p-1 text-[white] text-sm">
         <span>© 2025 Jun kyung Lee. All rights reserved.</span>
         <div className="flex gap-2">

@@ -87,10 +87,10 @@ export const InfoCard = () => {
       </div>
 
       <div
-        className={`w-full h-fit flex md:hidden lg:hidden items-start px-1 bg-gradient-to-t from-transparent to-[#366d84]`}
+        className={`w-full h-fit flex md:hidden lg:hidden items-start`}
       >
         <motion.div
-          className="w-full flex justify-between items-start flex-row pt-6 px-3"
+          className="w-full flex justify-between items-start flex-row  px-3 bg-[#366d84] mx-3 py-2 rounded-xl shadow-shadow shadow-md"
           initial={{ y: "110vh", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -105,14 +105,14 @@ export const InfoCard = () => {
               Native | Tailwind | Figma | UX/UI
             </span>
             <span
-              className="text-md cursor-pointer hover:underline align-middle text-[#315a6d]"
+              className="text-md cursor-pointer hover:underline align-middle text-[#dcedf1]"
               onClick={handleCopy}
               title="Click to copy"
             >
               {email} {copied && <CheckIcon fontSize="extrasmall" />}
             </span>
           </div>
-          <div className="w-[30%] flex flex-col items-end text-[#315a6d]">
+          <div className="w-[30%] flex flex-col items-end text-[#dcedf1]">
             <img
               src={portraitSmall}
               loading="lazy"
